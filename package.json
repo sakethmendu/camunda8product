@@ -1,6 +1,11 @@
 {
   "name": "player-app",
   "version": "0.0.0",
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -18,8 +23,27 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "@apollo/client": "^3.0.0",
+    "apollo-angular": "^4.1.0",
+    "assert": "^2.0.0",
+    "bootstrap": "^5.2.2",
+    "dgram": "^1.0.1",
+    "dns": "^0.2.2",
+    "graphql": "^16",
+    "http": "^0.0.1-security",
+    "http2": "^3.3.7",
+    "https": "^1.0.0",
+    "net": "^1.0.2",
+    "ngx-image-zoom": "^1.0.1",
     "rxjs": "~7.5.0",
+    "stream": "^0.0.2",
+    "tls": "^0.0.1",
     "tslib": "^2.3.0",
+    "url": "^0.11.0",
+    "util": "^0.12.5",
+    "workit-zeebe-client": "^4.2.5",
+    "zeebe-node": "^8.1.2",
+    "zlib": "^1.0.5",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

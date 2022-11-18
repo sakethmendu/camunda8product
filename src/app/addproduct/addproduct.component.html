@@ -1,0 +1,21 @@
+<br>
+<br>
+<br>
+<br>
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <form>
+            <label>Product Url:
+                <input type="text" [(ngModel)]="product.productUrl" placeholder="Image Url"
+                    name="productUrl"></label><br>
+            <label>Product Name:
+                <input type="text" [(ngModel)]="product.productName" placeholder="Product name"
+                    name="productName"></label><br>
+            <label>Product Description:
+                <input type="text" [(ngModel)]="product.productDescription" placeholder="product"
+                    name="productDescription"></label><br><br>
+            <!-- <a routerLink="" class="btn btn-success" (click)="addProduct()">Submit</a> -->
+            <a  class="btn btn-primary" (click)="addProductCamunda()">Submit</a>
+        </form>
+    </div>
+</div>

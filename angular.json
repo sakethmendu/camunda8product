@@ -23,6 +23,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -67,7 +68,8 @@
               "browserTarget": "player-app:build:production"
             },
             "development": {
-              "browserTarget": "player-app:build:development"
+              "browserTarget": "player-app:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

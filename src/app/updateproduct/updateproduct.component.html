@@ -1,0 +1,55 @@
+<br>
+<br>
+<br>
+<div *ngIf="isLoading">
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+<table class="table">
+    <tbody *ngFor="let task of tasklist;  let i = index">
+        <tr>
+            <th scope="row">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                        aria-controls="collapseOne" (click)="expand(i)">
+                        {{task.id}}
+                    </button>
+                </h5>
+            </th>
+            <td>
+                <h5 class="mb-0">
+                    <button type="button" class="btn btn-primary" (click)="claim(task.id)">Claim</button>
+                </h5>
+            </td>
+        </tr>
+        <table class="table" *ngIf="expande[i]">
+            <thead>
+                <tr>
+                    <th scope="col">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col"> Process Name</th>
+                                    <th scope="col"> {{task.processName}}</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col"> Task Name</th>
+                                    <th scope="col"> {{task.name}}</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col"> Creation Time</th>
+                                    <th scope="col"> {{task.creationTime}}</th>
+                                </tr>
+                                <tr *ngFor="let variables of task.variables">
+                                    <th scope="col"> {{variables.name}}</th>
+                                    <th scope="col"> {{variables.value}}</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+    </tbody>
+</table>

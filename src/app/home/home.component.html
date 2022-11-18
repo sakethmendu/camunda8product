@@ -1,1 +1,22 @@
-<p>home works!</p>
+<section style="background-color: rgb(252, 252, 252);">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6 col-xl-4">
+                <br>
+                <div class="card text-black" *ngFor="let Product of Products">
+                    <i class="fab fa-apple fa-lg pt-3 pb-1 px-3"></i>
+                    <img src={{Product.productUrl}} class="card-img-top" alt="Card image cap" width="400"
+                        height="400" />
+                    <div class="card-body">
+                        <div class="text-center">
+                            <h5 class="card-title">{{Product.productName}}</h5>
+                            <p class="text-muted mb-4">{{Product.productDescription}}</p>
+                        </div>
+                    </div>
+                    <a routerLink="view/{{Product.productId}}" class="btn btn-primary">View Product</a>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

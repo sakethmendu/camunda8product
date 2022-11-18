@@ -1,0 +1,48 @@
+<br>
+<br>
+<br>
+<div *ngIf="isLoading">
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+<table class="table">
+    <tbody *ngFor="let task of tasklist;  let i = index">
+        <tr>
+            <th scope="row">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                        aria-controls="collapseOne" (click)="expand(i)">
+                        {{task.id}}
+                    </button>
+                </h5>
+            </th>
+            <td>
+                <h5 class="mb-0">
+                    <button type="button" class="btn btn-primary" (click)="completetask(task.id, i)">Complete Task</button>
+                </h5>
+            </td>
+        </tr>
+        <table class="table" *ngIf="expande[i]">
+            <thead>
+                <tr>
+                    <th scope="col">
+                        <table class="table">
+                            <thead>
+                                <tr *ngFor="let variables of task.variables">
+                                    <th scope="col"> {{variables.name}}</th>
+                                    <th scope="col"> {{variables.value}}</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col"> <label>imageValid </label></th>
+                                    <th scope="col"> <input [(ngModel)]="imageValid[i]" /></th>
+                                </tr>
+                            </thead>
+
+                        </table>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+    </tbody>
+</table>
